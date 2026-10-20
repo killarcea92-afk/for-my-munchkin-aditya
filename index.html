@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Munchkin ♡</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: radial-gradient(ellipse at center, #29252a, #09090b 75%);
+      color: #fff6ed;
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+
+    .scene {
+      width: min(92%, 520px);
+      padding: 30px 16px;
+    }
+
+    .eyebrow {
+      color: #d6b6a5;
+      letter-spacing: 4px;
+      font: 11px Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(28px, 7vw, 46px);
+      line-height: 1.2;
+      font-weight: normal;
+    }
+
+    .lens {
+      width: 210px;
+      height: 210px;
+      max-width: 65vw;
+      max-height: 65vw;
+      margin: 28px auto;
+      border: 8px solid #75665d;
+      border-radius: 50%;
+      background: radial-gradient(circle, #101116 0 22%, #4d5961 23% 27%, #17191d 29% 48%, #5c514b 50% 53%, #08090c 55%);
+      box-shadow: 0 0 0 5px #201c1b, 0 0 45px #b88c7140, inset 0 0 22px #000;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: transform .7s, box-shadow .7s;
+      color: #fff6ed;
+      font: 12px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .lens:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 0 5px #201c1b, 0 0 65px #d9b49b70;
+    }
+
+    .lens span {
+      background: #09090bc9;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .hint {
+      color: #d2c5bd;
+      font: 13px Arial, sans-serif;
+    }
+
+    #surprise {
+      display: none;
+      animation: reveal 1.5s ease both;
+    }
+
+    #surprise h1 { color: #e8c3a9; }
+
+    #surprise p {
+      line-height: 1.9;
+      color: #f0e3db;
+    }
+
+    button {
+      background: #b58b78;
+      color: #130e0d;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 24px;
+      margin-top: 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 4px;
+    }
+
+    .flash {
+      position: fixed;
+      inset: 0;
+      background: white;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .flash.fire { animation: flash .7s ease-out; }
+
+    @keyframes flash {
+      0% { opacity: 0; }
+      15% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+    
+/* LADAKH CINEMATIC CHAPTER */
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+.scene {
+  margin: 0 auto;
+}
+
+#ladakh {
+  display: none;
+  min-height: 100vh;
+  padding: 90px 24px 55px;
+  text-align: center;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(8, 13, 22, 0.25),
+      rgba(8, 13, 22, 0.75),
+      #090d14
+    ),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
+  color: #fff6ed;
+  animation: mountainReveal 1.4s ease both;
+}
+
+#ladakh .chapter {
+  color: #e4c4a6;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 5px;
+}
+
+#ladakh h2 {
+  max-width: 850px;
+  margin: 24px auto;
+  font-size: clamp(36px, 7vw, 68px);
+  line-height: 1.1;
+  font-weight: normal;
+  text-shadow: 0 4px 25px #000;
+}
+
+#ladakh .mountain-quote {
+  max-width: 650px;
+  margin: 30px auto;
+  color: #fff7ef;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.9;
+}
+
+#ladakh .quote {
+  max-width: 600px;
+  margin: 36px auto;
+  padding: 20px;
+  border-top: 1px solid #ffffff50;
+  border-bottom: 1px solid #ffffff50;
+  color: #e8c5a8;
+  font-size: clamp(20px, 3vw, 27px);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+#ladakh .next-chapter {
+  border: 1px solid #d7b69b;
+  background: #d7b69b;
+  color: #171211;
+}
+
+#ladakh .scroll-note {
+  margin-top: 55px;
+  color: #e0d5cc;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+}
+
+@keyframes mountainReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ 
+/* OUR LITTLE WORLD - PHOTO GALLERY */
+#memories {
+  display: none;
+  min-height: 100vh;
+  padding: 75px 20px;
+  color: #f9eee7;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #352b32, #111014 70%);
+}
+
+#memories .chapter {
+  color: #d8b49f;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 4px;
+}
+
+#memories h2 {
+  font-size: clamp(34px, 6vw, 54px);
+  font-weight: normal;
+  margin: 22px 0;
+}
+
+.memory-intro,
+.memory-ending {
+  max-width: 620px;
+  margin: 20px auto 35px;
+  line-height: 1.9;
+  color: #e5d5cd;
+}
+
+.memory-grid {
+  max-width: 950px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.memory-card {
+  margin: 0;
+  padding: 10px;
+  background: #ffffff0b;
+  border: 1px solid #c6a18b40;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.memory-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.memory-card figcaption {
+  padding: 14px 5px 8px;
+  color: #f0d5c5;
+  font: italic 16px Georgia, serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .memory-grid {
+    gap: 12px;
+  }
+
+  .memory-card {
+    padding: 6px;
+  }
+
+  .memory-card figcaption {
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <main class="scene">
+    <div id="opening">
+      <p class="eyebrow">A LITTLE SURPRISE BY PRACHI</p>
+      <h1>Through My Lens,<br>My Munchkin</h1>
+
+      <button class="lens" id="shutter" aria-label="Open your birthday surprise">
+        <span>CLICK TO OPEN</span>
+      </button>
+
+      <p class="hint">Tap the lens to reveal your surprise ♡</p>
+    </div>
+
+    <section id="surprise" aria-live="polite">
+      <p class="eyebrow">21 OCTOBER</p>
+      <h1>Happy Birthday,<br>Munchkin! ♡</h1>
+      <p>
+        To the boy who captures the beauty of the world
+        through his lens — may life capture you in its
+        happiest moments, surrounded by mountains,
+        wonderful adventures, and endless reasons to smile.
+      </p>
+      <p>With all my love,<br>Prachi ♡</p>
+      <button id="enterStory">Enter Our Story →</button>
+      <button id="replay">Replay the Surprise ↺</button>
+    </section>
+  </main>
+  
+<section id="ladakh">
+  <p class="chapter">CHAPTER 01 · YOUR KIND OF PARADISE</p>
+
+  <h2>Somewhere Between<br>
+  the Mountains and the Sky</h2>
+
+  <p class="mountain-quote">
+    Happy Birthday, my Munchkin! ♡<br><br>
+
+    I know how your eyes light up at distant mountains,
+    beautiful landscapes, and moments waiting to be captured.
+
+    If happiness had a landscape, I imagine it would look
+    a little like Ladakh — wild, peaceful, breathtaking,
+    and impossible to forget.<br><br>
+
+    May your life be full of roads that lead to beautiful
+    places, skies that leave you speechless, and mountains
+    that make you feel alive.<br><br>
+
+    May you always find the freedom to explore, the courage
+    to chase your dreams, and a thousand beautiful reasons
+    to smile.
+  </p>
+
+  <p class="quote">
+    "You were born to chase horizons, collect moments,
+    and turn ordinary seconds into extraordinary memories."
+  </p>
+
+  <p class="mountain-quote">
+    Wherever your dreams take you, Munchkin,
+    may the world always give you something beautiful to capture.
+  </p>
+
+  <button class="next-chapter" id="backToBirthday">
+    Back to My Birthday Wish ♡
+  </button>
+  
+<button class="next-chapter" id="enterMemories">
+  Our Little World ♡ →
+</button>
+
+
+  <p class="scroll-note">MADE WITH LOVE · FROM PRACHI</p>
+</section>
+
+<section id="memories">
+  <p class="chapter">CHAPTER 02 · MY FAVOURITE MEMORIES</p>
+
+  <h2>Our Little World ♡</h2>
+
+  <p class="memory-intro">
+    Out of all the beautiful things this world has to offer,
+    some of my favourite moments are simply the ones with you.
+  </p>
+
+  <div class="memory-grid">
+    <figure class="memory-card">
+      <img src="memory1.jpg" alt="A favourite memory together">
+      <figcaption>My favourite place is beside you. ♡</figcaption>
+    </figure>
+
+    <figure class="memory-card">
+      <img src="memory2.jpg" alt="A happy moment together">
+      <figcaption>Little moments, endless happiness.</figcaption>
+    </figure>
+
+    <figure class="memory-card">
+      <img src="memory3.jpg" alt="A special day together">
+      <figcaption>Another memory I will always treasure.</figcaption>
+    </figure>
+
+    <figure class="memory-card">
+      <img src="memory4.jpg" alt="A beautiful memory together">
+      <figcaption>If I could, I'd relive this moment.</figcaption>
+    </figure>
+
+    <figure class="memory-card">
+      <img src="memory5.jpg" alt="A moment from our journey">
+      <figcaption>Growing, laughing, and finding our way.</figcaption>
+    </figure>
+
+    <figure class="memory-card">
+      <img src="memory6.jpg" alt="A cherished memory together">
+      <figcaption>To many more memories, Munchkin. ♡</figcaption>
+    </figure>
+  </div>
+
+  <p class="memory-ending">
+    Every photograph holds a moment. Every moment holds a feeling.
+    And some of my happiest feelings will always remind me of you.
+  </p>
+</section>
+
+  <div class="flash" id="flash"></div>
+
+  <script>
+    const opening = document.getElementById("opening");
+    const surprise = document.getElementById("surprise");
+    const shutter = document.getElementById("shutter");
+    const flash = document.getElementById("flash");
+    const replay = document.getElementById("replay");
+
+    function openSurprise() {
+      opening.style.display = "none";
+      surprise.style.display = "block";
+      flash.classList.remove("fire");
+      void flash.offsetWidth;
+      flash.classList.add("fire");
+    }
+
+    function replaySurprise() {
+      surprise.style.display = "none";
+      opening.style.display = "block";
+    }
+
+const ladakh = document.getElementById("ladakh");
+const enterStory = document.getElementById("enterStory");
+const backToBirthday = document.getElementById("backToBirthday");
+    
+const memories = document.getElementById("memories");
+const enterMemories = document.getElementById("enterMemories");
+
+
+enterStory.addEventListener("click", () => {
+  ladakh.style.display = "block";
+  ladakh.scrollIntoView({ behavior: "smooth" });
+});
+
+backToBirthday.addEventListener("click", () => {
+  ladakh.style.display = "none";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+enterMemories.addEventListener("click", () => {
+  ladakh.style.display = "none";
+  memories.style.display = "block";
+  memories.scrollIntoView({ behavior: "smooth" });
+});
+    
+    shutter.addEventListener("click", openSurprise);
+    replay.addEventListener("click", replaySurprise);
+  </script>
+</body>
+</html>
